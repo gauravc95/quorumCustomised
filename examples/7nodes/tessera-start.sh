@@ -77,7 +77,7 @@ fi
 echo Config type $TESSERA_CONFIG_TYPE
 
 currentDir=`pwd`
-for i in {1..7}
+for i in {1..3}
 do
     DDIR="qdata/c$i"
     mkdir -p ${DDIR}
@@ -107,7 +107,7 @@ k=10
 while ${DOWN}; do
     sleep 1
     DOWN=false
-    for i in {1..7}
+    for i in {1..3}
     do
         if [ ! -S "qdata/c${i}/tm.ipc" ]; then
             echo "Node ${i} is not yet listening on tm.ipc"
